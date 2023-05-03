@@ -1,15 +1,15 @@
 //prompt the length of password-choose 8-128, //prompt character type-choose lower, upper, numeric, or special character
-var userChoice = {
+var userChoiceOptions = {
     lowerCase: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w','x', 'y', 'z'],
     upperCase: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
     numeric: [1,2,3,4,5,6,7,8,9,0],
     specialCharacter: "~`!@#$%^&*()_-=+{}[]\|/;:'<>,.?",
 };
 
-console.log(userChoice.lowerCase);
-console.log(userChoice.upperCase);
-console.log(userChoice.numeric);
-console.log(userChoice.specialCharacter);
+console.log(userChoiceOptions.lowerCase);
+console.log(userChoiceOptions.upperCase);
+console.log(userChoiceOptions.numeric);
+console.log(userChoiceOptions.specialCharacter);
 //prompts for password criteria
 
 //answer to each prompt-answer chould be validated and one character type should be selected

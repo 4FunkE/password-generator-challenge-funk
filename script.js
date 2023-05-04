@@ -6,6 +6,14 @@ var userChoiceOptions = {
     specialCharacter: ['!', '@' , '#', '$', '%', '^', '&', '*', '?'],
 };
 
+//named variables
+var chosenLower;
+var chosenUpper;
+var chosenNumeric;
+var chosenSpecial;
+
+var userChoice;
+
 console.log(userChoiceOptions.lowerCase);
 console.log(userChoiceOptions.upperCase);
 console.log(userChoiceOptions.numeric);
@@ -33,8 +41,9 @@ var generateBtn = function() {
 };
 
 //how will code read input?
-
-
+if (chosenLower && chosenUpper && chosenNumeric && chosenSpecial) {
+    userChoice = (userChoiceOptions.numeric + userChoiceOptions.lowerCase + userChoiceOptions.upperCase + userChoiceOptions.specialCharacter);
+}
 
 //generate a random password function for computer
 for (var i = 0; i < enter; i++) {

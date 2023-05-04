@@ -25,13 +25,23 @@ var generateBtn = function() {
     if (onClick < 8 || onClick > 128) {
         onClick = parseInt(alert("Invalid: Please choose a number from 8-128."));
     } else {
+    //all the other criteria choices
         var userChoiceSpecial = confirm("Would you like to include special characters in your password?");
         var userChoiceLower = confirm("Would you like to include lowercase letters in your password?");
         var userChoiceUpper = confirm("Would you like to include uppercase letters in your password?");
     } 
 };
 
-//when all prompts are answered-password is generated-either in alert or written on page
+//how will code read input?
+
+
+
+//generate a random password function for computer
+for (var i = 0; i < enter; i++) {
+    var userChoiceList = choices[Math.floor(Math.random() * choices.length)];
+    password.push(pickChoices);
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -41,10 +51,8 @@ function writePassword() {
 
 }
 
-//generate a random password function
-function getRandomCharacter(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//when all prompts are answered-password is generated-either in alert or written on page

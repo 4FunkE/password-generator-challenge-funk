@@ -40,6 +40,9 @@ var generateBtn = function() {
     } 
 };
 
+
+
+//START HERE!
 //how will code read input?
 if (chosenLower && chosenUpper && chosenNumeric && chosenSpecial) {
     userChoice = (userChoiceOptions.numeric + userChoiceOptions.lowerCase + userChoiceOptions.upperCase + userChoiceOptions.specialCharacter);

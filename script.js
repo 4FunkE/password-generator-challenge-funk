@@ -35,10 +35,10 @@ var generatePassword = function() {
     //start with an empty character field
     var characters = "";
     //if the users chooses a parameter, add to characters variable
-    if(userChoiceSpecial) characters += userChoiceOptions.specialCharacter;
-    if(userChoiceLower) characters += userChoiceOptions.lowerCase;
-    if(userChoiceUpper) characters += userChoiceOptions.upperCase;
-    if(userChoiceNumeric) characters += userChoiceOptions.numeric;
+    if(userChoiceSpecial) characters += userChoiceOptions.specialCharacter.join("");
+    if(userChoiceLower) characters += userChoiceOptions.lowerCase.join("");
+    if(userChoiceUpper) characters += userChoiceOptions.upperCase.join("");
+    if(userChoiceNumeric) characters += userChoiceOptions.numeric.join("");
     //to create random character compbination from choices by user
     for (var i = 0; i < length; i++) {
         var randomPassword = Math.floor(Math.random() * characters.length);
@@ -49,10 +49,9 @@ var generatePassword = function() {
 };
 
 // Add event listener to generate button
-generateBtn.addEventListener("click");
-function generatePassword () {
-    var password = generateBtn();
+generateBtn.addEventListener("click", function () {
+    var password = generatePassword();
     if (password) {
-        passwordTextArea.value = password;
+      passwordTextArea.value = password;
     }
-};
+  });

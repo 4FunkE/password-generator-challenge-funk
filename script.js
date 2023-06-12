@@ -12,14 +12,14 @@ console.log(userChoiceOptions.specialCharacter);
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-var passwordTextarea = document.querySelector("#password");
+var passwordTextArea = document.querySelector("#password");
 
 
 //when you press the generate button a window prompts 
 var generateBtn = function() {
+    var password = "";
     //when click button start window prompt
     var onClick = window.prompt("How many characters would you like your password to have? Choose 8-128"); 
-    
     //must use 8-128
     if (onClick < 8 || onClick > 128 || isNaN(onClick)) {
         alert("Invalid: Please choose a number from 8-128.");
@@ -48,19 +48,10 @@ var generateBtn = function() {
         return password;
 };
 
-
-
-
-// Write password to the #password input
-function writePassword(password) {
-    var password = "";
-  //var password = generatePassword.join("");
-  var passwordText = document.querySelector("#password");
-    //where is the data?
-    //userInput(password);
-  passwordText.value = password;
-
-}
-
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", function () {
+    var password = generateBtn();
+    if (password) {
+        passwordTextArea.value = password;
+    }
+});

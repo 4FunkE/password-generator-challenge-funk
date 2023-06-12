@@ -31,7 +31,7 @@ var generateBtn = function() {
     var userChoiceUpper = confirm("Would you like to include uppercase letters in your password?");
     var userChoiceNumeric = confirm("Would you like to include numbers in your password?");
 
-    //generate a random password function for computer
+    //generate a random password for computer
     //start with an empty character field
     var characters = "";
     //if the users chooses a parameter, add to characters variable
@@ -49,9 +49,10 @@ var generateBtn = function() {
 };
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", function () {
+generateBtn.addEventListener("click");
+function generatePassword () {
     var password = generateBtn();
     if (password) {
         passwordTextArea.value = password;
     }
-});
+};

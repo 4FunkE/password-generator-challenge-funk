@@ -10,15 +10,9 @@ console.log(userChoiceOptions.upperCase);
 console.log(userChoiceOptions.numeric);
 console.log(userChoiceOptions.specialCharacter);
 
-//named variables
-// var chosenLower;
-// var chosenUpper;
-// var chosenNumeric;
-// var chosenSpecial;
-// var userChoice;
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var passwordTextarea = document.querySelector("#password");
 
 
 //when you press the generate button a window prompts 
@@ -50,7 +44,8 @@ var generateBtn = function() {
         var randomPassword = Math.floor(Math.random() * characters.length);
         //password will equal password plus characters at random combination
         password += characters.charAt(randomPassword);
-}
+    } 
+        return password;
 };
 
 
@@ -67,13 +62,5 @@ function writePassword(password) {
 
 }
 
-//how will code read input?
-if (chosenLower && chosenUpper && chosenNumeric && chosenSpecial) {
-    userChoice = (userChoiceOptions.numeric + userChoiceOptions.lowerCase + userChoiceOptions.upperCase + userChoiceOptions.specialCharacter);
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//answer to each prompt-answer chould be validated and one character type should be selected
-//when all prompts are answered-password is generated-either in alert or written on page

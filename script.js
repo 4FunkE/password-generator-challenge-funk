@@ -31,26 +31,29 @@ var generateBtn = function() {
         alert("Invalid: Please choose a number from 8-128.");
         return; 
     }
-    
-    
-        // //all the other criteria choices
-        // var userChoiceSpecial = confirm("Would you like to include special characters in your password?");
-        // var userChoiceLower = confirm("Would you like to include lowercase letters in your password?");
-        // var userChoiceUpper = confirm("Would you like to include uppercase letters in your password?");
+    //all the other criteria choices
+    var userChoiceSpecial = confirm("Would you like to include special characters in your password?");
+    var userChoiceLower = confirm("Would you like to include lowercase letters in your password?");
+    var userChoiceUpper = confirm("Would you like to include uppercase letters in your password?");
+    var userChoiceNumeric = confirm("Would you like to include numbers in your password?");
+
+    //generate a random password function for computer
+    //start with an empty character field
+    var characters = "";
+    //if the users chooses a parameter, add to characters variable
+    if(userChoiceSpecial) characters += userChoiceOptions.specialCharacter;
+    if(userChoiceLower) characters += userChoiceOptions.lowerCase;
+    if(userChoiceUpper) characters += userChoiceOptions.upperCase;
+    if(userChoiceNumeric) characters += userChoiceOptions.numeric;
+    //to create random character compbination from choices by user
+    for (var i = 0; i < length; i++) {
+        var randomPassword = Math.floor(Math.random() * characters.length);
+        //password will equal password plus characters at random combination
+        password += characters.charAt(randomPassword);
+}
 };
 
 
-//START HERE!
-//how will code read input?
-if (chosenLower && chosenUpper && chosenNumeric && chosenSpecial) {
-    userChoice = (userChoiceOptions.numeric + userChoiceOptions.lowerCase + userChoiceOptions.upperCase + userChoiceOptions.specialCharacter);
-}
-
-//generate a random password function for computer
-for (var i = 0; i < userChoiceOptions.length; i++) {
-    var userChoiceList = choices[Math.floor(Math.random() * choices.length)];
-    password.push(pickChoices);
-}
 
 
 // Write password to the #password input
@@ -64,6 +67,10 @@ function writePassword(password) {
 
 }
 
+//how will code read input?
+if (chosenLower && chosenUpper && chosenNumeric && chosenSpecial) {
+    userChoice = (userChoiceOptions.numeric + userChoiceOptions.lowerCase + userChoiceOptions.upperCase + userChoiceOptions.specialCharacter);
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

@@ -15,12 +15,13 @@ The purpose of this webpage is to assist user in creating a password generated b
 ## Installation
 
 There is no installation needed. User will only needs to follow uniform resource locator (url). 
+- https://4funke.github.io/password-generator-challenge-funk/ 
 
 ## Usage
 
 Once the web browser is open the user will start by clicking the "generate password" button. The browser will display prompts that the user will use to set the criteria they want for their password. After the prompts are finished the webpage will display a password.
 
-    ![alt text](./assets/images/password-generator-webshot.png)
+![alt text](./assets/images/password-generator-webshot.png)
 
 ## Credits
 

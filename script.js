@@ -16,13 +16,13 @@ var passwordTextArea = document.querySelector("#password");
 
 
 //when you press the generate button a window prompts 
-var generateBtn = function() {
+var generatePassword = function() {
     var password = "";
-    //when click button start window prompt
-    var onClick = window.prompt("How many characters would you like your password to have? Choose 8-128"); 
+    //start window prompt
+    var length = parseInt(window.prompt("How many characters would you like your password to have? Choose 8-128")); 
     //must use 8-128
-    if (onClick < 8 || onClick > 128 || isNaN(onClick)) {
-        alert("Invalid: Please choose a number from 8-128.");
+    if (length < 8 || length > 128 || isNaN(length)) {
+        alert("Please choose a number from 8-128.");
         return; 
     }
     //all the other criteria choices
